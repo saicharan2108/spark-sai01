@@ -26,7 +26,8 @@ const Temp = () => {
 
   const handleSubmit = () => {
     setIsLoading(true);
-    const prompt = `Based on the following entry, generate a list of questions and send them in JSON format so we can handle - ${userInput}`;
+    const prompt = `Based on the given word or sentence that starts after & , generate a list of questions and send them in JSON format so we can handle here is the word or sentence - & ${userInput}`;
+    // const prompt = `Based on the following entry, generate a list of questions and send them in JSON format so we can handle - ${userInput}`;
 
     openai.chat.completions.create({
       model: "gpt-3.5-turbo",
