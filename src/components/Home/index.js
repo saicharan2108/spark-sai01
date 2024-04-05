@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { OpenAI } from 'openai'; // Correct import statement
 
-const Key = "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";
+const Key = "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";
 const openai = new OpenAI({
   apiKey: Key,
   dangerouslyAllowBrowser: true,
