@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { OpenAI } from 'openai'; // Correct import statement
 
-const Key = "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";
+const Key = "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";
 const openai = new OpenAI({
   apiKey: Key,
   dangerouslyAllowBrowser: true,
@@ -27,7 +27,7 @@ const Temp = () => {
   const handleSubmit = () => {
     setIsLoading(true);
     // const prompt = `Based on the given word or sentence that starts after & , generate a list of questions and send them in JSON format so we can handle here is the word or sentence - & ${userInput}`;
-    const prompt = `Based on the following entry, generate a list of questions and send them in JSON format so we can handle - ${userInput}`;
+    const prompt = `Based on the following entry, generate a list of questions and send them in JSON format so we can handle here is the entry - ${userInput}`;
 
     openai.chat.completions.create({
       model: "gpt-3.5-turbo",
